@@ -13,8 +13,10 @@ int main()
 		lastdigit = n % 10;
 	    result = result * 10 + lastdigit; 
 		n = n / 10;
-		
+		 
 	}
 	cout<<result<<endl;
 	return 0;
 }
+
+
