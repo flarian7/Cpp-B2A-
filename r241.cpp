@@ -1,36 +1,32 @@
-//#include<iostream>
-//using namespace std;
-//
-//int main()
-//{
-//	int i,n;
-//	cin>>n;
-//	
-//	int product = 1;
-//	
-//	for(i=1;i<=n;i++)
-//	{
-//		product = product * i;
-//	}
-//	
-//	cout<<product<<endl;
-//	
-//	
-//	
-//	return 0;
-//}
-
 #include<iostream>
 using namespace std;
+
 int main()
 {
-	int i,n;
-	cin>>n;
 	
-	for(i=n;i<=n*10;i+=n)
-	{
-		cout<<i<<endl;
-	}
-	
+int n;
+cout<<"Enter the number : ";
+cin>>n;
+int lastdigit;
+int num = n;
+int cubesum = 0;
+
+while(n>0)
+{
+	lastdigit = num % 10 ;
+	cubesum += lastdigit*lastdigit*lastdigit;
+	num = num / 10;
+}
+
+if(cubesum == n)
+{
+	cout<<n<<" is an armstrong number"<<endl;
+}
+
+else
+{
+	cout<<n<<" is not an armstrong number"<<endl;
+}
+
 	return 0;
 }
